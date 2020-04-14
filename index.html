@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Tubes Social Media</title>
+    <style>
+        #search-box, #users-box, nav {
+            width: 70%;
+            margin: 50px auto;
+            border:2px solid #000;
+            padding:10px;
+            overflow: hidden;
+        }
+
+        nav > h2 {
+            text-align: center;;
+        }
+
+        nav > h2> span {
+            color: cornflowerblue;
+            cursor: pointer;
+        }
+
+        #search-box > input {
+            display: block;
+            width: 70%;
+            margin:0 auto;
+            font-size:24px;
+        }
+
+        #search-box > button {
+            font-size: 24px;
+            display: block;
+            margin:10px auto;
+        }
+
+        .user-item {
+            width:25%;
+            border: 1px solid blue;
+            padding: 10px;
+            float:left;
+            margin:10px;
+        }
+
+        #filters {
+            width: 250px;
+            height: 92%;
+            border: 1px solid #000;
+            position: absolute;
+            top:50px;
+            right:0;
+            color:white;
+            background-color: turquoise;
+            display: none;
+        }
+
+        #filters > p {
+            width: 100%;
+        }
+
+        #filters > select, #filters > button {
+            font-size: 18px;
+            width:100%;
+        }
+
+        #login-box {
+            border:1px solid #000;
+            padding:15px;
+            width: 600px;
+            position: absolute;
+            left: 50%;
+            margin-left: -300px;
+            top: 15%;
+            background-color:darkcyan;
+            color:white;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>
+            <span class="login-btn">Login</span> |
+            <span>Register</span> |
+            <span id="filters-nav">Filters</span> |
+        </h2>
+    </nav>
+
+    <div id="search-box">
+        <h1 style="width: 100%; text-align:center;">Code Tubes Social Media</h1>
+        <input id="search-text" type="text" placeholder="Search...">
+        <button id="search-button">Search</button>
+    </div>
+
+    <div id="users-box">
+
+    </div>
+
+    <div id="filters">
+        <h2>Filters</h2>
+
+        <p>Country</p>
+        <select name="" id="country-filter">
+            <option value="">----------</option>
+            <option value="Armenia">Armenia</option>
+            <option value="USA">USA</option>
+            <option value="Russia">Russia</option>
+        </select>
+
+        <p>Gender</p>
+        <select name="" id="gender-filter">
+            <option value="">----------</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <br>
+        <br>
+        <button id="update-filters">Update</button>
+    </div>
+
+    <div id="login-box">
+        <h2>Login | <span style="cursor:pointer;float:right" class="login-btn">X</span></h2>
+        <p>Email</p>
+        <input type="text" id="email"><span id="email-message"></span>
+        <p>Password</p>
+        <input type="text">
+        <br>
+        <br>
+        <button>Login</button>
+    </div>
+
+    <script src="social.js"></script>
+</body>
+</html>
